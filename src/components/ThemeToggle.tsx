@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export const ThemeToggle = () => {
     const [mounted, setMounted] = useState(false);
-    const { theme, setTheme, resolvedTheme } = useTheme();
+    const { setTheme, resolvedTheme } = useTheme();
 
     // Avoid hydration mismatch
     useEffect(() => {
