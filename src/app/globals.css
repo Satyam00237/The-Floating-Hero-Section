@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+.dark {
+  --background: #020617;
+  --foreground: #f8fafc;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  @apply overflow-x-hidden transition-colors duration-500;
+}
+
+/* Apply transitions to specific interactive elements instead of everything */
+a,
+button,
+input,
+.floating-card {
+  @apply transition-all duration-300;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
